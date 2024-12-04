@@ -48,7 +48,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
             s3Client.putObject(request, RequestBody.fromString(urlDataJson));
 
         } catch (Exception e) {
-            throw new RuntimeException("Error saving URL data to s3" + e.getMessage(), e);
+            throw new RuntimeException("Error saving URL data to s3 " + e.getMessage(), e);
         }
 
         Map<String, String> response = new HashMap<>();
